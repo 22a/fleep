@@ -16,7 +16,12 @@ class Tile extends Component {
       backgroundColor: this.state.color
     }
     return (
-      <div style={tileStyle} onMouseEnter={this.setColor}></div>
+      <div style={tileStyle}
+        onClick={this.setColor}
+        onContextMenu={this.setColor}
+        onTouchMove={this.setColor}
+        onMouseMove={this.setColor}
+      ></div>
     )
   }
 }
